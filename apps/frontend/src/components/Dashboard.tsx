@@ -12,7 +12,8 @@ export default function Dashboard() {
 
   useEffect(() => {
     // Fetch from Library MCP
-    fetch('http://localhost:3001/query', {
+    const libUrl = process.env.NEXT_PUBLIC_LIBRARY_URL || 'http://localhost:3001';
+    fetch(`${libUrl}/query`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ query: '{"action": "search_book"}' })
@@ -22,7 +23,8 @@ export default function Dashboard() {
       .catch(() => {});
 
     // Fetch from Cafeteria MCP
-    fetch('http://localhost:3002/query', {
+    const cafUrl = process.env.NEXT_PUBLIC_CAFETERIA_URL || 'http://localhost:3002';
+    fetch(`${cafUrl}/query`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ query: '{"action": "get_todays_menu"}' })
@@ -32,7 +34,8 @@ export default function Dashboard() {
       .catch(() => {});
 
     // Fetch from Events MCP
-    fetch('http://localhost:3003/query', {
+    const evUrl = process.env.NEXT_PUBLIC_EVENTS_URL || 'http://localhost:3003';
+    fetch(`${evUrl}/query`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ query: '{"action": "get_upcoming_events", "params": {"limit": 3}}' })
@@ -42,7 +45,8 @@ export default function Dashboard() {
       .catch(() => {});
 
     // Fetch from Academics MCP
-    fetch('http://localhost:3004/query', {
+    const acUrl = process.env.NEXT_PUBLIC_ACADEMICS_URL || 'http://localhost:3004';
+    fetch(`${acUrl}/query`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ query: '{"action": "get_deadlines"}' })
@@ -52,7 +56,7 @@ export default function Dashboard() {
       .catch(() => {});
 
     // Fetch Timetable
-    fetch('http://localhost:3004/query', {
+    fetch(`${acUrl}/query`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ query: '{"action": "get_timetable", "params": {"day": "Monday"}}' })

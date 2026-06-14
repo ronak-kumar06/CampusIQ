@@ -5,10 +5,10 @@ import google.generativeai as genai
 
 # MCP endpoints
 MCP_SERVICES = {
-    "library": "http://localhost:3001/query",
-    "cafeteria": "http://localhost:3002/query",
-    "events": "http://localhost:3003/query",
-    "academics": "http://localhost:3004/query",
+    "library": os.getenv("LIBRARY_MCP_URL", "http://localhost:3001/query"),
+    "cafeteria": os.getenv("CAFETERIA_MCP_URL", "http://localhost:3002/query"),
+    "events": os.getenv("EVENTS_MCP_URL", "http://localhost:3003/query"),
+    "academics": os.getenv("ACADEMICS_MCP_URL", "http://localhost:3004/query"),
 }
 
 def call_mcp(service: str, action: str, params: dict):

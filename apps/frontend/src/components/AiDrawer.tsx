@@ -32,7 +32,8 @@ export default function AiDrawer() {
     setLiveSteps(['🧠 Analyzing intent...']);
     
     try {
-      const res = await fetch('http://localhost:8000/chat', {
+      const agentUrl = process.env.NEXT_PUBLIC_AGENT_URL || 'http://localhost:8000';
+      const res = await fetch(`${agentUrl}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: userMsg, session_id: 'default_user' })
