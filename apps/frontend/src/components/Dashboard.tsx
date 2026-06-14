@@ -60,10 +60,12 @@ export default function Dashboard() {
       .catch(() => {});
 
     // Fetch Timetable
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const currentDay = days[new Date().getDay()];
     fetch(`${acUrl}/query`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: '{"action": "get_timetable", "params": {"day": "Monday"}}' })
+      body: JSON.stringify({ query: `{"action": "get_timetable", "params": {"day": "${currentDay}"}}` })
     })
       .then(res => res.json())
       .then(data => setTimetableData(data.timetable || []))
