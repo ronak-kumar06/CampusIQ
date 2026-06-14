@@ -1,0 +1,23 @@
+@echo off
+echo Starting Unified Campus Intelligence Dashboard...
+
+echo Starting Library MCP (Port 3001)...
+start cmd /k "cd packages\library-mcp && pip install -r requirements.txt && python main.py"
+
+echo Starting Cafeteria MCP (Port 3002)...
+start cmd /k "cd packages\cafeteria-mcp && pip install -r requirements.txt && python main.py"
+
+echo Starting Events MCP (Port 3003)...
+start cmd /k "cd packages\events-mcp && pip install -r requirements.txt && python main.py"
+
+echo Starting Academics MCP (Port 3004)...
+start cmd /k "cd packages\academics-mcp && pip install -r requirements.txt && python main.py"
+
+echo Starting Intelligence Agent (Port 8000)...
+start cmd /k "cd apps\intelligence-agent && pip install -r requirements.txt && python main.py"
+
+echo Starting Next.js Frontend (Port 3000)...
+start cmd /k "cd apps\frontend && npm run dev"
+
+echo All services are starting up!
+echo The frontend will be available at http://localhost:3000

@@ -4,6 +4,10 @@ from sqlalchemy.orm import Session
 from pydantic import BaseModel
 import models, database, agent
 from typing import List
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Create DB tables
 models.Base.metadata.create_all(bind=database.engine)
