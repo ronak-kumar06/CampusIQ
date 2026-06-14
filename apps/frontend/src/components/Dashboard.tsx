@@ -145,7 +145,7 @@ export default function Dashboard() {
           <div className="absolute -right-10 -top-10 w-40 h-40 bg-white/30 rounded-full blur-3xl group-hover:scale-110 transition-transform duration-500"></div>
           <div className="flex justify-between items-center mb-4 relative z-10">
             <h2 className="text-2xl font-semibold">Upcoming Events</h2>
-            <button className="text-sm font-medium text-purple-700 hover:text-purple-900 transition-colors">View All &rarr;</button>
+
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 relative z-10">
             {eventsData.length > 0 ? eventsData.map((event, i) => (
