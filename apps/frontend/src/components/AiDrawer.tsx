@@ -52,6 +52,7 @@ export default function AiDrawer() {
       }, 500); // small delay to let user read the final synthesis step
       
     } catch (error) {
+      console.error(error);
       setMessages(prev => [...prev, { role: 'model', content: "⚠️ Cannot reach Intelligence Agent. Is the FastAPI service running?" }]);
       setIsLoading(false);
       setLiveSteps([]);
