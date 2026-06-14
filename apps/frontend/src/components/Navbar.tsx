@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 
 export default function Navbar() {
   const [time, setTime] = useState('');
@@ -19,9 +20,14 @@ export default function Navbar() {
       </div>
       <div className="flex items-center gap-6">
         <div className="text-sm text-gray-500 hidden sm:block font-medium">{time}</div>
-        <div className="w-10 h-10 rounded-full bg-gray-200 overflow-hidden shadow-soft border-2 border-white">
-          <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Student" alt="Student Avatar" />
-        </div>
+        <SignedOut>
+          <div className="bg-accent text-white px-4 py-1.5 rounded-full text-sm font-medium hover:bg-purple-500 transition-colors">
+            <SignInButton />
+          </div>
+        </SignedOut>
+        <SignedIn>
+          <UserButton afterSignOutUrl="/" />
+        </SignedIn>
       </div>
     </nav>
   );

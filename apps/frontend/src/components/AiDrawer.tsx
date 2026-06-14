@@ -1,5 +1,6 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
+import { useUser } from '@clerk/nextjs';
 
 type Message = {
   role: 'user' | 'model';
@@ -7,6 +8,7 @@ type Message = {
 };
 
 export default function AiDrawer() {
+  const { user } = useUser();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
@@ -36,7 +38,7 @@ export default function AiDrawer() {
       const res = await fetch(`${agentUrl}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: userMsg, session_id: 'default_user' })
+        body: JSON.stringify({ message: userMsg, session_id: user?.id || 'default_user' })
       });
       
       const data = await res.json();
