@@ -32,7 +32,7 @@ export default function AiDrawer() {
     setLiveSteps(['🧠 Analyzing intent...']);
     
     try {
-      const agentUrl = process.env.NEXT_PUBLIC_AGENT_URL || 'http://localhost:8000';
+      const agentUrl = process.env.NEXT_PUBLIC_AGENT_URL || 'https://campusiq-production-acbc.up.railway.app';
       const res = await fetch(`${agentUrl}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

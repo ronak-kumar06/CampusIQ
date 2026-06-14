@@ -5,10 +5,10 @@ import google.generativeai as genai
 
 # MCP endpoints
 MCP_SERVICES = {
-    "library": os.getenv("LIBRARY_MCP_URL", "http://localhost:3001/query"),
-    "cafeteria": os.getenv("CAFETERIA_MCP_URL", "http://localhost:3002/query"),
-    "events": os.getenv("EVENTS_MCP_URL", "http://localhost:3003/query"),
-    "academics": os.getenv("ACADEMICS_MCP_URL", "http://localhost:3004/query"),
+    "library": os.getenv("LIBRARY_MCP_URL", "https://adaptable-magic-production-867e.up.railway.app/query"),
+    "cafeteria": os.getenv("CAFETERIA_MCP_URL", "https://courteous-mindfulness-production-338a.up.railway.app/query"),
+    "events": os.getenv("EVENTS_MCP_URL", "https://humorous-hope-production-8c62.up.railway.app/query"),
+    "academics": os.getenv("ACADEMICS_MCP_URL", "https://abundant-amazement-production-dd4c.up.railway.app/query"),
 }
 
 def call_mcp(service: str, action: str, params: dict):

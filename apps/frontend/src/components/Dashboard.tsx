@@ -12,7 +12,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     // Fetch from Library MCP
-    const libUrl = process.env.NEXT_PUBLIC_LIBRARY_URL || 'http://localhost:3001';
+    const libUrl = process.env.NEXT_PUBLIC_LIBRARY_URL || 'https://adaptable-magic-production-867e.up.railway.app';
     fetch(`${libUrl}/query`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -23,7 +23,7 @@ export default function Dashboard() {
       .catch(() => {});
 
     // Fetch from Cafeteria MCP
-    const cafUrl = process.env.NEXT_PUBLIC_CAFETERIA_URL || 'http://localhost:3002';
+    const cafUrl = process.env.NEXT_PUBLIC_CAFETERIA_URL || 'https://courteous-mindfulness-production-338a.up.railway.app';
     fetch(`${cafUrl}/query`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -34,7 +34,7 @@ export default function Dashboard() {
       .catch(() => {});
 
     // Fetch from Events MCP
-    const evUrl = process.env.NEXT_PUBLIC_EVENTS_URL || 'http://localhost:3003';
+    const evUrl = process.env.NEXT_PUBLIC_EVENTS_URL || 'https://humorous-hope-production-8c62.up.railway.app';
     fetch(`${evUrl}/query`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -45,7 +45,7 @@ export default function Dashboard() {
       .catch(() => {});
 
     // Fetch from Academics MCP
-    const acUrl = process.env.NEXT_PUBLIC_ACADEMICS_URL || 'http://localhost:3004';
+    const acUrl = process.env.NEXT_PUBLIC_ACADEMICS_URL || 'https://abundant-amazement-production-dd4c.up.railway.app';
     fetch(`${acUrl}/query`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
