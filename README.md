@@ -55,6 +55,11 @@ Instead of building a massive, brittle centralized database, this platform relie
   <em>The Main Unified Dashboard with Live Data Feeds</em>
 </div>
 
+## 🎥 Demo Video
+
+Watch the full demonstration of the Unified Campus Intelligence Dashboard and the AI Agent in action here:
+[**Watch Demo Video (Google Drive) »**](https://drive.google.com/drive/folders/1Frw7WCDPwtAWOdQYE26im67Hotv8dUQY?usp=sharing)
+
 ## 🏗 Architecture
 
 The system utilizes an AI Router pattern where the LLM dynamically decides which microservice to contact based on the user's intent.
