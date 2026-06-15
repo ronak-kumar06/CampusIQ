@@ -45,16 +45,14 @@ Instead of building a massive, brittle centralized database, this platform relie
 
 ## 📸 Dashboard Showcase
 
-> *Add your screenshots here!*
-
 <div align="center">
-  <img src="docs/dashboard-screenshot.png" alt="CampusIQ Main Dashboard" width="800"/>
-  <br/>
-  <em>The Main Unified Dashboard with Live Data Feeds</em>
-  <br/><br/>
   <img src="docs/ai-drawer-screenshot.png" alt="CampusIQ AI Drawer" width="800"/>
   <br/>
   <em>The Embedded Intelligence Agent Drawer</em>
+  <br/><br/>
+  <img src="docs/dashboard-screenshot.png" alt="CampusIQ Main Dashboard" width="800"/>
+  <br/>
+  <em>The Main Unified Dashboard with Live Data Feeds</em>
 </div>
 
 ## 🏗 Architecture
@@ -137,5 +135,4 @@ pip install -r requirements.txt
 python main.py
 ```
 
-## 📄 License
-MIT License - Free to use and modify for educational purposes.
+
