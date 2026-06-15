@@ -6,7 +6,7 @@
   <p align="center">
     One place for everything happening on campus, supercharged by an AI Intelligence Agent.
     <br />
-    <a href="https://campusiq-dashboard.vercel.app"><strong>View Live Demo »</strong></a>
+    <a href="https://campus-hzluqzwz4-ronaks-projects-6caf0893.vercel.app/"><strong>View Live Demo »</strong></a>
     <br />
     <br />
     <a href="#features">Features</a>
